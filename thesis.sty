@@ -1,0 +1,132 @@
+\ProvidesPackage{thesis}
+
+
+\usepackage[subfigure]{tocloft}
+
+\usepackage{scrextend}                              %
+\usepackage{graphicx}                               %
+\usepackage{wrapfig}                                % Wrap images properly around text
+
+\usepackage[dvipsnames]{xcolor}                     %
+\usepackage[a4paper, top=25mm, bottom=25mm, left=30mm, right=30mm]{geometry}
+\usepackage[estonian,greek,english]{babel}          % Add Estonian / English language support & Greek for Euro Symbol
+\usepackage{longtable}                              %
+\usepackage{multirow}                               %
+\usepackage{todonotes}                              %
+
+
+\usepackage{xcolor} 
+\definecolor{astral}{RGB}{46,116,181}
+\usepackage{enumitem}
+\usepackage{pifont}
+
+\let\cftsubsecpagefont\cftsecpagefont
+
+%\usepackage{subfig} 
+\usepackage{float}                                  %
+\usepackage{blindtext}                              %
+\usepackage{chngcntr}\counterwithin{table}{chapter}%
+%\counterwithout{figure}{chapter}                    %
+\counterwithin{figure}{chapter}
+\usepackage[T2A,T1]{fontenc}                        %
+\usepackage[utf8]{inputenc}                         %
+\usepackage{amssymb}                                % For square itemized lists
+\renewcommand{\labelitemi}{\tiny$\blacksquare$}     % For square itemized lists
+\usepackage[format=hang,singlelinecheck=0,font={sf,small},labelfont=bf]{subfig}
+\usepackage{caption}                                %
+\captionsetup{labelsep=period}     
+%\renewcommand*\thesubfloatfigure{\themainfigure(\alph{subfloatfigure})}
+%\captionsetup[subfigure]{subrefformat=simple,labelformat=simple,listofformat=subsimple}
+%\renewcommand\thesubfigure{(\alph{subfigure})}
+%\captionsetup[subfloat]{farskip=1pt,captionskip=1pt, justification=centering}
+\usepackage{verbatimbox} % To put program code in the center using Verbatim
+\usepackage{amsmath}  % For mathematical facilities
+
+\usepackage[english]{babel}
+
+\usepackage[
+backend=biber,
+style=ieee,
+]{biblatex}               % For references
+\usepackage{csquotes}                               % For references
+\addbibresource{references.bib}                     % Adds references file
+\emergencystretch=1em                               % To prevent overfull hbox in \printbibliography
+\usepackage[final]{microtype}                       % To prevent overfull hbox in \printbibliography - option 2
+
+\usepackage{times}                                  %
+\setlength{\parindent}{0cm}                         %
+\usepackage{setspace}                               %
+\onehalfspacing                                     %
+\setlength{\parskip}{\baselineskip}                 %
+\newcounter{ltrow}                                  %
+\usepackage{listings}                               %
+\usepackage{needspace}                              % To keep text together when needed use, %\needspace{6em}
+
+\usepackage{titlesec}                        %             \usepackage[Lenny]{sty/fncychapleo}                                      % Title formatting
+%\titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}                         %
+\usepackage{tabularx} 
+
+% \titleformat{\chapter}[display]
+% {\bfseries\Large} 
+% {\begin{tabularx}{\linewidth}{@{}Xl@{}}
+% \raisebox{3ex}{\rule[-1.8ex]{\linewidth}{5pt}}
+%  & \textsuperscript{\fontsize{30}{60}\selectfont{Chapter}}
+% {\fontsize{70}{60}\selectfont\thechapter}\end{tabularx}} 
+% {10 pt}
+% {\bfseries\fontsize{25}{20}\selectfont}
+% \titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}  
+
+\titlespacing*{\section}{0pt}{0pt}{0pt}                                                         
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}                                                      
+% \titlespacing*{\subsubsection}{0pt}{0pt}{-10pt}                                                 
+% \titleformat{\section}[hang]{\normalfont\large\bf}{\thesection}{1em}{}[]                        
+% \titleformat{\subsection}[hang]{\normalfont\large\bf}{\thesubsection}{1em}{}[]                  
+% \titleformat{\subsubsection}[hang]{\normalfont\normalsize\bf}{\thesubsubsection}{1em}{}[]       
+
+\usepackage{enumitem}               \usepackage[noend]{algpseudocode}                        % Sets list spacing
+\setlist[itemize]{noitemsep, topsep=0pt}                    %
+\setlist[enumerate]{noitemsep, topsep=0pt}                  %
+\usepackage{tocloft} % Adds control over Table of Content style %
+\renewcommand{\cfttoctitlefont}{\LARGE\bfseries}      %
+ \renewcommand{\cftloftitlefont}{\LARGE\bfseries}     %
+\renewcommand{\cftlottitlefont}{\LARGE\bfseries}      %
+\renewcommand{\cftaftertoctitle}{\hfill\hfill}              %
+\renewcommand{\cftafterloftitle}{\hfill}                    %
+\renewcommand{\cftafterlottitle}{\hfill}                    %
+\setlength{\cftbeforetoctitleskip}{0em}                     %
+\setlength{\cftbeforeloftitleskip}{0em}                     %
+\setlength{\cftbeforelottitleskip}{0em}                     %                   %  
+\usepackage{booktabs}
+% \usepackage{subcaption} comment by anik
+%\usepackage{tocbibind}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\DontPrintSemicolon
+\SetKwInput{KwInput}{Input}                % Set the Input
+\SetKwInput{KwOutput}{Output} 
+\SetKwData{KwData}{Data}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{}
+\fancyhead[R]{\nouppercase\rightmark}
+\renewcommand{\headrulewidth}{0.4pt}
+\cfoot{\thepage}
+\setcounter{secnumdepth}{4}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{0301}{}
+
+\usepackage{rotating}
+\usepackage[toc,title, titletoc]{appendix}
+
+\usepackage{gensymb}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{gensymb}
+\usetikzlibrary{shapes.geometric,arrows}
+\usetikzlibrary{positioning}
+%%%%%%%%%%%

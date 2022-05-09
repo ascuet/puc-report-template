@@ -1,0 +1,103 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{titling}
+\usepackage{thesis}
+\usepackage{comment}
+\usepackage{subfig}
+\usepackage{lipsum}  
+\usepackage[tableposition=top]{caption}
+\usepackage[Glenn]{fncychap} % Available options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstr
+% \pagestyle{empty}
+%\renewcommand{\headrulewidth}{0pt} % remove header line
+\usepackage{lipsum}
+\usepackage[colorlinks=True, linktocpage=true]{hyperref}
+\hypersetup{
+    citecolor= blue,
+    urlcolor= blue,
+}
+
+
+\newcommand{\department}{Department of Computer Science \& Engineering}
+\newcommand{\university}{Premier University, Chattogram}
+
+\newcommand{\chairmanName}{Prof. Dr. Taufique Sayeed}
+\newcommand{\chairmanDesignation}{Chairman}
+
+\newcommand{\supervisorName}{Anik Sen}
+\newcommand{\supervisorDesignation}{Lecturer}
+
+\newcommand{\firstAuthorName}{Faiham Sharif Fahim}
+\newcommand{\firstAuthorId}{1502910201022}
+\newcommand{\secondAuthorName}{Mohammad Naimul Alam}
+\newcommand{\secondAuthorId}{1502910201033}
+\newcommand{\thirdAuthorName}{Belal uddin touhin}
+\newcommand{\thirdAuthorId}{1502910201052}
+
+\newcommand{\projectTitle}{Soccer Event Classification Using Convolutional Neural Network \& Gated Recurrent Unit}
+
+\begin{document}
+
+\pagenumbering{roman}
+\include{title_page}
+\pagebreak
+
+
+\include{author_declaration}
+\pagebreak
+
+\include{signature}
+\pagebreak
+
+
+\input{dedication}
+\pagebreak
+
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+
+\clearpage 
+\setcounter{figure}{0}
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\clearpage 
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+ 
+
+\clearpage
+\input{abstract}
+
+%\phantomsection
+
+
+% Introduction
+\chapter{Introduction}\label{chapter:chapter1}
+\setcounter{page}{0}
+\pagenumbering{arabic}  
+\input{chapters/introduction}
+
+% Literature Review
+\chapter{Literature Review}
+\input{chapters/literature_review}
+
+% Proposed Methodology
+\chapter{Methodology/Proposed Method/Workflow}
+\input{chapters/methodology}
+
+% Results and Discussion
+\chapter{Experimental Results and Discussion}
+\input{chapters/results}
+
+
+% Bibliography
+\pagebreak
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\nocite{*}
+\printbibliography
+\pagebreak
+\phantomsection
+
+\end{document}
